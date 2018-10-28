@@ -69,7 +69,6 @@ public class Kermis {
 			break;
 		case "6":
 			ladderklimmen.draaien();
-//			ladderklimmen.kansSpelBelastingReserveren(ladderklimmen);
 			break;
 		case "k":
 			aantalKaartjesTonen = true;
@@ -84,6 +83,7 @@ public class Kermis {
 			System.out.println("belastinginspecteur");
 			kassa.bezoekBelastinginspecteur = true;
 			inspecteur.checkenGokAttractie(kermisAttracties);
+//			inspecteur.belastingInnen(inspecteur.gokAttractiesLijst);
 //			inspecteur.belastingInnen(inspecteur.checkenGokAttractie(kermisAttracties));
 			break;
 		case "s":

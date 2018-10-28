@@ -8,40 +8,42 @@ public abstract class Attractie {
 	private int aantalVerkochteKaartjesAttractie;
 	protected static int aantalVerkochteKaartjesTotaal;
 	private double omzetAttractie;
-	
+
 	public void draaien() {
 		aantalVerkochteKaartjesAttractie = geefAantalVerkochteKaartjesAttractie() + 1;
 		aantalVerkochteKaartjesTotaal++;
 		System.out.println("De attractie " + naamAttractie + " draait.\n");
 	}
-	
-	public void winstAtrractie(Attractie a, Belastinginspecteur b) {
-		if (a instanceof GokAttractie) {
-			omzetAttractie = (geefAantalVerkochteKaartjesAttractie() * prijs) - b.belastingPerAttractie;
-		} else {
-		omzetAttractie = (geefAantalVerkochteKaartjesAttractie() * prijs);
-		}
-		System.out.printf("De winst voor de attractie %s is: %.2f \n", naamAttractie, omzetAttractie);
-	}
-	
+
+
 	public double omzetAtrractieBerekenen(Attractie a) {
 		omzetAttractie = (geefAantalVerkochteKaartjesAttractie() * prijs);
-//		System.out.printf("De omzet voor de attractie %s is: %.2f \n", naamAttractie, omzetAttractie);
+		// System.out.printf("De omzet voor de attractie %s is: %.2f \n", naamAttractie,
+		// omzetAttractie);
 		return omzetAttractie;
 	}
-	
+
 	public int geefAantalVerkochteKaartjesAttractie() {
 		return aantalVerkochteKaartjesAttractie;
 	}
 
 	public int geefAantalVerkochteKaartjeTotaal() {
-		return aantalVerkochteKaartjesTotaal; 
+		return aantalVerkochteKaartjesTotaal;
 	}
 
 }
 
-//	public double geefOmzetAttractie() {
-//		return omzetAttractie;
-//	}
 /*
+// public double geefOmzetAttractie() {
+// return omzetAttractie;
+// }
+
+public void winstAtrractie(Attractie a, Belastinginspecteur b) {
+	if (a instanceof GokAttractie) {
+		omzetAttractie = (geefAantalVerkochteKaartjesAttractie() * prijs) - b.belastingPerAttractie;
+	} else {
+		omzetAttractie = (geefAantalVerkochteKaartjesAttractie() * prijs);
+	}
+	System.out.printf("De winst voor de attractie %s is: %.2f \n", naamAttractie, omzetAttractie);
+}
 */

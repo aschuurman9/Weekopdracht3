@@ -7,11 +7,9 @@ public class Ladderklimmen extends Attractie implements GokAttractie {
 		this.prijs = prijs;
 	}
 
-	
 	public double kansSpelBelastingReserveren(GokAttractie a) {
-		double kansSpelBelasting = 0;
-		kansSpelBelasting = (((Attractie) a).omzetAtrractieBerekenen((Attractie) a)/100)*30;
-		System.out.println("kansspelbelasting reserveren: " + kansSpelBelasting + "\n");
+		double kansSpelBelasting = (((Attractie) a).omzetAtrractieBerekenen((Attractie) a) / 100) * 30;
+		System.out.printf("kansspelbelasting reserveren ladderklimmen: %.2f\n" , kansSpelBelasting);
 		return kansSpelBelasting;
 	}
 
